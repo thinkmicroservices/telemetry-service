@@ -1,0 +1,32 @@
+jwt.secret: 7h1nkm1cr053rv1c35
+controller.cors.origin: http://localhost:8080
+ 
+ 
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: mongo
+      repositories:
+        enable: true        
+            
+ 
+      
+    
+management:
+  endpoints:
+    metrics:
+      sensitive: false
+    web:
+      exposure:
+        include: info,health,prometheus
+        
+management.metrics.tags.application: ${spring.application.name}     
+    
+
+ 
+
+
+ 
+ 
